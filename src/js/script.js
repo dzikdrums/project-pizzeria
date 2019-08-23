@@ -81,6 +81,7 @@
       thisProduct.formInputs = thisProduct.form.querySelectorAll(select.all.formInputs);
       thisProduct.cartButton = thisProduct.element.querySelector(select.menuProduct.cartButton);
       thisProduct.priceElem = thisProduct.element.querySelector(select.menuProduct.priceElem);
+      thisProduct.imageWrapper = thisProduct.element.querySelector(select.menuProduct.imageWrapper);
     }
 
     initAccordion(){
@@ -90,7 +91,7 @@
         (event).preventDefault();
         thisProduct.element.classList.toggle(classNames.menuProduct.wrapperActive);
         let activeProducts = document.querySelectorAll(select.all.menuProductsActive);
-
+        console.log(activeProducts);
         for (let activeProduct of activeProducts) {
           if ( activeProduct != thisProduct.element) {
             activeProduct.classList.remove(classNames.menuProduct.wrapperActive);
@@ -135,7 +136,22 @@
           } else if (!optionSelected && option.default) {
             price = price - option.price;
           }
-        }
+
+          // DO SPRAWDZENIA
+
+          let className = '.' + paramId + '-' + optionId;
+          let images = thisProduct.imageWrapper.querySelectorAll(className);
+
+          if (selected) {
+            for (let image in images) {
+              image.classList.add('active');
+            }
+          } else {
+            for (let image in images) {
+              image.classList.remove('active');
+            }
+          }
+          }
       }
       let thisProductPrice = thisProduct.element.querySelector(select.menuProduct.priceElem);
       thisProductPrice.innerHTML = price;
