@@ -138,11 +138,11 @@
           }
 
           // DO SPRAWDZENIA
-
+          /*
           let className = '.' + paramId + '-' + optionId;
           let images = thisProduct.imageWrapper.querySelectorAll(className);
 
-          if (selected) {
+          if (optionSelected) {
             for (let image in images) {
               image.classList.add('active');
             }
@@ -150,8 +150,8 @@
             for (let image in images) {
               image.classList.remove('active');
             }
-          }
-          }
+          }*/
+        }
       }
       let thisProductPrice = thisProduct.element.querySelector(select.menuProduct.priceElem);
       thisProductPrice.innerHTML = price;
