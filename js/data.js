@@ -12,7 +12,7 @@ dataSource.products = {
     params: {
       doughnut: {
         label: 'Doughnut type',
-        type: 'radios',
+        type: 'checkboxes',
         options: {
           chocolate: {label: 'chocolate', price: 1, default: false}
         }
