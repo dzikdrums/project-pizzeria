@@ -137,27 +137,24 @@
             price = price - option.price;
           }
 
-          // DO SPRAWDZENIA
-          /*
           let className = '.' + paramId + '-' + optionId;
           let images = thisProduct.imageWrapper.querySelectorAll(className);
 
           if (optionSelected) {
-            for (let image in images) {
+            for (let image of images) {
               image.classList.add('active');
             }
           } else {
-            for (let image in images) {
+            for (let image of images) {
               image.classList.remove('active');
             }
-          }*/
-        }
+          }
       }
       let thisProductPrice = thisProduct.element.querySelector(select.menuProduct.priceElem);
       thisProductPrice.innerHTML = price;
     }
   }
-
+}
   const app = {
     initData: function() {
       const thisApp = this;
