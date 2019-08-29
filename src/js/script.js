@@ -273,7 +273,7 @@
     update() {
       const thisCart = this;
 
-      thisCart.totalNumber = 0
+      thisCart.totalNumber = 0;
       thisCart.subtotalPrice = 0;
 
       for (let product of thisCart.products) {
@@ -295,7 +295,7 @@
       thisCart.dom.wrapper = element;
       thisCart.dom.toggleTrigger = thisCart.dom.wrapper.querySelector(select.cart.toggleTrigger);
       thisCart.dom.productList = thisCart.dom.wrapper.querySelector(select.cart.productList);
-      thisCart.renderTotalKeys = ['totalNumber', 'totalPrice', 'subtotalPrice', 'deliveryFee']
+      thisCart.renderTotalKeys = ['totalNumber', 'totalPrice', 'subtotalPrice', 'deliveryFee'];
       for (let key of thisCart.renderTotalKeys) {
         thisCart.dom[key] = thisCart.dom.wrapper.querySelectorAll(select.cart[key]);
       }
@@ -352,7 +352,7 @@
     getElements(element) {
       const thisCartProduct = this;
 
-      thisCartProduct.dom = {}
+      thisCartProduct.dom = {};
 
       thisCartProduct.dom.wrapper = element;
       thisCartProduct.dom.amountWidget = thisCartProduct.dom.wrapper.querySelector(select.cartProduct.amountWidget);
@@ -375,24 +375,24 @@
 
       thisCartProduct.dom.edit.addEventListener('click', function() {
         event.preventDefault();
-      })
+      });
       thisCartProduct.dom.remove.addEventListener('click', function() {
         event.preventDefault();
         thisCartProduct.remove();
-      })
+      });
     }
-  remove() {
-    const thisCartProduct = this;
+    remove() {
+      const thisCartProduct = this;
 
-    const event = new CustomEvent('remove', {
-      bubbles: true,
-      detail: {
-        cartProduct: thisCartProduct,
-      },
-    });
-    thisCartProduct.dom.wrapper.dispatchEvent(event);
+      const event = new CustomEvent('remove', {
+        bubbles: true,
+        detail: {
+          cartProduct: thisCartProduct,
+        },
+      });
+      thisCartProduct.dom.wrapper.dispatchEvent(event);
+    }
   }
-}
 
   const app = {
     initCart: function() {
