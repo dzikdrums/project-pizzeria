@@ -109,7 +109,7 @@ export const settings = {
     tableIdAttribute: 'data-table',
   },
   db: {
-    url: '//localhost:3131',
+    url: 'https://my-json-server.typicode.com/dzikdrums/json.server',
     product: 'product',
     order: 'order',
     booking: 'booking',
