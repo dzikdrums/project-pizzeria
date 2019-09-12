@@ -63,6 +63,7 @@ export const select = {
     peopleAmount: '.people-amount',
     hoursAmount: '.hours-amount',
     tables: '.floor-plan .table',
+    form: '.booking-form',
   },
   nav: {
     links: '.main-nav a',
@@ -109,7 +110,7 @@ export const settings = {
     tableIdAttribute: 'data-table',
   },
   db: {
-    url: 'https://my-json-server.typicode.com/dzikdrums/json.server',
+    url: '//localhost:3131',
     product: 'product',
     order: 'order',
     booking: 'booking',
