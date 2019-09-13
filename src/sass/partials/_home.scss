@@ -1,0 +1,148 @@
+.main-container {
+  background-color: white;
+  height: 1258px;
+  border-radius: 4px;
+  margin-top: 42px;
+}
+
+.first-row-btn {
+  margin-top: 63px;
+  width: 294px;
+  height: 119px;
+  border-radius: 4px;
+  border-color: white;
+  background-color: black;
+  color: white;
+  font-family: Oswald;
+  font-size: 26px;
+  text-transform: uppercase;
+  letter-spacing: -0.65px;
+  padding: 0;
+}
+
+.order .first-row-btn {
+  background-image: url('/images/assets/pizza-1.jpg');
+  background-size: 299px 119px;
+}
+
+.book .first-row-btn {
+  background-image: url('/images/assets/pizza-2.jpg');
+  margin-left: 6px;
+}
+
+.first-row {
+  display: flex;
+  justify-content: center;
+}
+
+.second-row {
+  display: flex;
+  justify-content: center;
+  margin-top: 6px;
+}
+
+.opening {
+  text-align: center;
+  margin: 0;
+  width: 594px;
+  height: 120px;
+  background-color: #ff6b6b;
+  border-radius: 4px;
+  font-family: Oswald;
+  text-transform: uppercase;
+  color: #ffffff;
+
+  h3 {
+    font-size: 26px;
+    letter-spacing: -0.65px;
+    margin-top: 32px;
+    margin-bottom: 0;
+  }
+
+  p {
+    font-family: Lato;
+    font-size: 14px;
+    font-weight: 300;
+    margin-top: 0;
+  }
+}
+
+.third-row {
+  display: flex;
+  justify-content: flex-start;
+  margin-top: 102px;
+  width: 604px;
+  margin-left: 34px;
+}
+
+.image {
+  background-image: url("/images/assets/pizza-3.jpg");
+  width: 193px;
+  height: 193px;
+  background-size: cover;
+}
+
+.quotes {
+  width: 367px;
+
+  ul {
+    padding-left: 70px;
+  }
+
+  li {
+    list-style: none;
+  }
+}
+
+.quote-title {
+  color: #333333;
+  font-family: Lato;
+  font-size: 14px;
+  font-weight: 700;
+  text-transform: uppercase;
+}
+
+.quote-content {
+  color: #333333;
+  font-family: Lato;
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 23px;
+}
+
+.quote-author {
+  color: #333333;
+  font-family: Lato;
+  font-size: 14px;
+  font-style: italic;
+  line-height: 23px;
+}
+
+.images-fist-row {
+  margin-top: 128px;
+}
+
+.images-fist-row, .images-second-row {
+  display: flex;
+  justify-content: center;
+
+  img {
+    width: 193px;
+    height: 193px;
+    margin: 6px;
+    border-radius: 4px;
+  }
+}
+
+.footer {
+  margin-top: 31px;
+}
+
+.footer a{
+  margin-left: 28px;
+  color: #ff6b6b;
+  font-family: Lato;
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 23px;
+}
