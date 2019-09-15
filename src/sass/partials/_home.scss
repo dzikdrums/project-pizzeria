@@ -1,23 +1,13 @@
 .main-container {
-  background-color: white;
+  background-color: $color-light;
   height: 1258px;
-  border-radius: 4px;
+  border-radius: $radius;
   margin-top: 42px;
 }
 
-.first-row-btn {
-  margin-top: 63px;
-  width: 294px;
-  height: 119px;
-  border-radius: 4px;
-  border-color: white;
-  background-color: black;
-  color: white;
-  font-family: Oswald;
-  font-size: 26px;
-  text-transform: uppercase;
-  letter-spacing: -0.65px;
-  padding: 0;
+// FIRST ROW
+.first-row {
+  @include flex(row, flex-start, center);
 }
 
 .order .first-row-btn {
@@ -30,14 +20,51 @@
   margin-left: 6px;
 }
 
-.first-row {
-  display: flex;
-  justify-content: center;
+.first-row-btn {
+  margin-top: 63px;
+  width: 294px;
+  height: 119px;
+  border-radius: $radius;
+  border-color: $color-light;
+  background-color: $color-dark;
+  color: $color-light;
+  font-family: $font-header;
+  letter-spacing: -0.65px;
+  padding: 0;
+
+  h2 {
+    text-transform: uppercase;
+    margin-bottom: 0;
+    line-height: 70px;
+    font-size: 26px;
+    transition: $transition;
+  }
+
+  p {
+    font-size: $home-size;
+    font-family: $font-text;
+    font-weight: 400;
+    opacity: 0;
+    transition: $transition;
+  }
 }
 
+.first-row-btn:hover {
+  h2 {
+    color: $color-light;
+    line-height: 40px;
+  }
+
+  p {
+    color: $color-light;
+    line-height: 40px;
+    opacity: 1;
+  }
+}
+
+// SECOND ROW
 .second-row {
-  display: flex;
-  justify-content: center;
+  @include flex(row, flex-start, center);
   margin-top: 6px;
 }
 
@@ -46,11 +73,11 @@
   margin: 0;
   width: 594px;
   height: 120px;
-  background-color: #ff6b6b;
-  border-radius: 4px;
-  font-family: Oswald;
+  background-color: $color-main;
+  border-radius: $radius;
+  font-family: $font-header;
   text-transform: uppercase;
-  color: #ffffff;
+  color: $color-light;
 
   h3 {
     font-size: 26px;
@@ -60,19 +87,19 @@
   }
 
   p {
-    font-family: Lato;
-    font-size: 14px;
-    font-weight: 300;
+    font-family: $font-text;
+    font-size: $home-size;
+    font-weight: $font-light;
     margin-top: 0;
   }
 }
 
+// THIRD OW
 .third-row {
-  display: flex;
-  justify-content: flex-start;
+  @include flex(row, flex-start, center);
   margin-top: 102px;
-  width: 604px;
-  margin-left: 34px;
+  width: 604;
+  margin-left: 34;
 }
 
 .image {
@@ -95,54 +122,94 @@
 }
 
 .quote-title {
-  color: #333333;
-  font-family: Lato;
-  font-size: 14px;
-  font-weight: 700;
+  color: $color-dark;
+  font-family: $font-text;
+  font-size: $home-size;
+  font-weight: $font-bold;
   text-transform: uppercase;
+  margin-top: 10px;
 }
 
 .quote-content {
-  color: #333333;
-  font-family: Lato;
-  font-size: 14px;
-  font-weight: 400;
+  color: $color-dark;
+  font-family: $font-text;
+  font-size: $home-size;
+  font-weight: $font-normal;
   line-height: 23px;
 }
 
 .quote-author {
-  color: #333333;
-  font-family: Lato;
-  font-size: 14px;
+  color: $color-dark;
+  font-family: $font-text;
+  font-size: $home-size;
   font-style: italic;
   line-height: 23px;
 }
 
 .images-fist-row {
-  margin-top: 128px;
+  margin-top: 80px;
 }
 
 .images-fist-row, .images-second-row {
-  display: flex;
-  justify-content: center;
+  @include flex(row, flex-start, center);
 
   img {
     width: 193px;
     height: 193px;
     margin: 6px;
-    border-radius: 4px;
+    border-radius: $radius;
   }
 }
 
+.image-gallery {
+  position: relative;
+  @include flex(row, flex-start, center);
+}
+
+.image-gallery img {
+  -webkit-filter: brightness(100%);
+}
+
+.image-gallery:hover {
+  img {
+    -webkit-filter: brightness(50%);
+    transition: $transition;
+  }
+
+  .icons {
+    opacity: 1;
+  }
+}
+
+.icons {
+  top: 40%;
+  font-size: 20px;
+  color: $color-light;
+  position: absolute;
+  letter-spacing: .2em;
+  opacity: 0;
+  transition: opacity 0.5 ease;
+}
+
+.heart, .branch{
+  color: $color-light;
+  transition: $transition;
+}
+
+.heart:hover, .branch:hover {
+  color: $color-main;
+}
+
 .footer {
-  margin-top: 31px;
+  margin-top: 12px;
 }
 
 .footer a{
   margin-left: 28px;
-  color: #ff6b6b;
-  font-family: Lato;
-  font-size: 14px;
-  font-weight: 400;
+  padding-bottom: 40px;
+  color: $color-main;
+  font-family: $font-text;
+  font-size: $home-size;
+  font-weight: $font-normal;
   line-height: 23px;
 }

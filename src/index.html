@@ -7,6 +7,10 @@
     <title>Pizzeria HOME</title>
     <link href="https://fonts.googleapis.com/css?family=Lato:400,300i,700%7COswald:300,500,700&amp;subset=latin-ext" rel="stylesheet">
     <link href="https://use.fontawesome.com/releases/v5.7.2/css/all.css" rel="stylesheet">
+    <link href="//netdna.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
+    <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/font-awesome/4.1.0/css/font-awesome.min.css">
+    <script src="//code.jquery.com/jquery-1.11.1.min.js"></script>
+    <script src="//netdna.bootstrapcdn.com/bootstrap/3.2.0/js/bootstrap.min.js"></script>
     <link rel="stylesheet" href="css/style.css">
   </head>
   <body>
@@ -23,10 +27,20 @@
     <div class="container main-container">
       <div class="first-row">
         <div class="order">
-          <button class="first-row-btn">Order online</button>
+          <a role="button" class="" href="subpage.html#/order">
+            <div class="first-row-btn order-btn btn btn-default">
+              <h2>Order online</h2>
+              <p class="description">Delicious food delivered to your door</p>
+            </div>
+          </a>
         </div>
         <div class="book">
-          <button class="first-row-btn">Book a table</button>
+          <a role="button" class="" href="subpage.html#/booking">
+            <div class="first-row-btn order-btn btn btn-default">
+              <h2>Book a table</h2>
+              <p class="description">Delicious food at our restaurant</p>
+            </div>
+          </a>
         </div>
       </div>
       <div class="second-row">
@@ -38,43 +52,96 @@
     <div class="third-row">
       <div class="image">
       </div>
-      <div class="quotes">
-        <ul>
-          <li>
-            <h2 class="quote-title">Amazing service!</h2>
-            <p class="quote-content">Lorem Ipsum doiajsd sdocihiuc aosioijc ascoih oihoihx asoiho oihoias oiho<p>
-            <p class="quote-author">-Margaret Osbourne</p>
-          </li>
-          <!-- <li>
-            <h2>Amazing service!</h2>
-            <p>Lorem Ipsum doiajsd sdocihiuc aosioijc ascoih oihoihx asoiho oihoias oiho<p>
-            <p>-Margaret Osbourne</p>
-          </li>
-          <li>
-            <h2>Amazing service!</h2>
-            <p>Lorem Ipsum doiajsd sdocihiuc aosioijc ascoih oihoihx asoiho oihoias oiho<p>
-            <p>-Margaret Osbourne</p>
-          </li> -->
-        </ul>
-      </div>
+      <section id="carousel" class="carousel">
+      	<div class="container">
+      		<div class="row">
+      			<div class="col-md-8 col-md-offset-0" data-ride="carousel" data-interval="3000">
+      				<div class="carousel slide" id="fade-quote-carousel" >
+                        <ol class="carousel-indicators">
+      				    <li data-target="#fade-quote-carousel" data-slide-to="0" class="active"></li>
+      				    <li data-target="#fade-quote-carousel" data-slide-to="1"></li>
+      				    <li data-target="#fade-quote-carousel" data-slide-to="2"></li>
+      				  </ol>
+      				  <div class="carousel-inner">
+      				    <div class="active item">
+      				    	<blockquote>
+                      <h2 class="quote-title">Title 1</h2>
+      				    		<p class="quote-content">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quidem, veritatis nulla eum laudantium totam tempore optio doloremque laboriosam quas</p>
+                      <p class="quote-author">-Kind Diamond</p>
+                    </blockquote>
+      				    </div>
+      				    <div class="item">
+      				    	<blockquote>
+                      <h2 class="quote-title">Title 2</h2>
+      				    		<p class="quote-content">Postaraj się odwzorować tę podstronę jak najlepiej. Możesz do tego wykorzystać np. wtyczkę do Chrome o nazwie PerfectPixel. Pozwala ona na nałożenie obrazu </p>
+                      <p class="quote-author">-Margaret Osborne</p>
+                    </blockquote>
+      				    </div>
+      				    <div class="item">
+      				    	<blockquote>
+                      <h2 class="quote-title">Title 3</h2>
+      				    		<p class="quote-content">Twoim zadaniem jest dodanie na stronie pizzerii nowej podstrony, która ma być przed pozostałymi – będzie to pierwsza podstrona, pełniąca rolę strony głównej.</p>
+                      <p class="quote-author">-Queen Elizabeth</p>
+                    </blockquote>
+      				    </div>
+      				  </div>
+      				</div>
+      			</div>
+      		</div>
+      	</div>
+      </section>
     </div>
     <div class="fourth-row">
       <div class="images-fist-row">
-        <img src="/images/assets/pizza-4.jpg" alt="picture of starters">
-        <img src="/images/assets/pizza-5.jpg" alt="picture of food on the table">
-        <img src="/images/assets/pizza-6.jpg" alt="picture of pizza on the table">
+        <div class="image-gallery">
+          <img src="/images/assets/pizza-4.jpg" alt="picture of starters">
+          <div class="icons">
+            <i class="fas fa-heart heart"></i>
+            <i class="fas fa-code-branch branch"></i>
+          </div>
+        </div>
+        <div class="image-gallery">
+          <img src="/images/assets/pizza-5.jpg" alt="picture of starters">
+          <div class="icons">
+            <i class="fas fa-heart heart"></i>
+            <i class="fas fa-code-branch branch"></i>
+          </div>
+        </div>
+        <div class="image-gallery">
+          <img src="/images/assets/pizza-6.jpg" alt="picture of starters">
+          <div class="icons">
+            <i class="fas fa-heart heart"></i>
+            <i class="fas fa-code-branch branch"></i>
+          </div>
+        </div>
       </div>
       <div class="images-second-row">
-        <img src="/images/assets/pizza-7.jpg" alt="picture of open sign">
-        <img src="/images/assets/pizza-8.jpg" alt="picture of chefs hands in flour">
-        <img src="/images/assets/pizza-9.jpg" alt="picture of open doors to shop">
+        <div class="image-gallery">
+          <img src="/images/assets/pizza-7.jpg" alt="picture of starters">
+          <div class="icons">
+            <i class="fas fa-heart heart"></i>
+            <i class="fas fa-code-branch branch"></i>
+          </div>
+        </div>
+          <div class="image-gallery">
+            <img src="/images/assets/pizza-8.jpg" alt="picture of starters">
+            <div class="icons">
+              <i class="fas fa-heart heart"></i>
+              <i class="fas fa-code-branch branch"></i>
+            </div>
+          </div>
+            <div class="image-gallery">
+              <img src="/images/assets/pizza-9.jpg" alt="picture of starters">
+              <div class="icons">
+                <i class="fas fa-heart heart"></i>
+                <i class="fas fa-code-branch branch"></i>
+              </div>
+            </div>
       </div>
     </div>
-  </div>
     <footer class="footer">
       <a href="#">View more on Instagram</a>
     </footer>
-
-    <script src="js/home.js"></script>
+  </div>
   </body>
 </html>

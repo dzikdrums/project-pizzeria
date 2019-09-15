@@ -40,8 +40,9 @@ class Booking {
     });
 
     thisBooking.dom.bookButton.addEventListener('submit', function() {
-      thisBooking.sendBooking();
       event.preventDefault();
+      thisBooking.sendBooking();
+      thisBooking.getData();
     });
 
     thisBooking.dom.bookButton.addEventListener('change', function(event) {
