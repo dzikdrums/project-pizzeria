@@ -41,8 +41,10 @@ class Booking {
 
     thisBooking.dom.bookButton.addEventListener('submit', function() {
       event.preventDefault();
-      thisBooking.sendBooking();
-      thisBooking.getData();
+      thisBooking.sendBooking()
+        .then(function(){
+          thisBooking.getData();
+        });
     });
 
     thisBooking.dom.bookButton.addEventListener('change', function(event) {
@@ -74,7 +76,8 @@ class Booking {
       body: JSON.stringify(payload),
     };
 
-    fetch(url, options)
+
+    return fetch(url, options)
       .then(function(response){
         return response.json();
       });
@@ -195,7 +198,6 @@ class Booking {
       if(!isNaN(tableId)) {
         tableId = parseInt(tableId);
       }
-
       if(
         !allAvailable
         &&
